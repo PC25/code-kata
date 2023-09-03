@@ -1,11 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    Hello
+    <form action="accounting" method="POST">
+        <label>Business Name</label>
+        <input type="text" name="businessName" />
+        <label>Year Established</label>
+        <input type="number" name="yearEstablished" />
+        <label>Loan Amount</label>
+        <input type="number" name="loanAmount" />
+        <label>Accounting Provider</label>
+        <input list="accountingProvider" name="accountingProvider">
+        <datalist id="accountingProvider">
+            <option value="Xero">
+            <option value="MYOB">
+        </datalist>
+        <button type="submit">Request Balance Sheet</button>
+    </form>
 </body>
+
 </html>
