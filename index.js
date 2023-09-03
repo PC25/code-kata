@@ -3,11 +3,13 @@ const path = require('path')
 const bodyParser = require('body-parser')
 
 const BalanceSheet = require('./models/balanceSheet')
-const accountingRoute = require('./routes/accountingProvider')
-const decisionRoute = require('./routes/decisionProvider')
+const accountingRoute = require('./controllers/accountingProvider')
+const decisionRoute = require('./controllers/decisionProvider')
 const app = express()
 app.set('view engine', 'ejs')
 app.set('views', 'views')
+
+app.use(express.static(path.join(__dirname, 'public')))
 
 app.use(bodyParser.urlencoded({ extended: false }))
 

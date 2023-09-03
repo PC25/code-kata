@@ -4,33 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/form.css">
+    <title>Review Application</title>
 </head>
 
 <body>
-    <form action="/decision" method="POST">
-        <input type="hidden" name="businessName" value="<%= businessName %>" />
-        <%= businessName %>
+    <div class="main">
+        <form action="/decision" method="POST">
+            <div class="form-input">
+                <label>Business Name</label>
+                <input type="text" name="businessName" value="<%= businessName %>" readonly />
+            </div>
 
-            <input type="hidden" name="yearEstablished" value="<%= yearEstablished %>" />
-            <%= yearEstablished %>
+            <div class="form-input">
+                <label>Year Established</label>
+                <input type="text" name="yearEstablished" value="<%= yearEstablished %>" readonly />
+            </div>
 
-                <input type="hidden" name="loanAmount" value="<%= loanAmount %>" />
-                <%= loanAmount %>
+            <div class="form-input">
+                <label>Loan Amount</label>
+                <input type="text" name="loanAmount" value="<%= loanAmount %>" readonly />
+            </div>
 
-                    <input type="hidden" name="accountingProvider" value="<%= accountingProvider %>" />
-                    <%= accountingProvider %>
+            <div class="form-input">
+                <label>Accounting Provider</label>
+                <input type="text" name="accountingProvider" value="<%= accountingProvider %>" readonly />
+            </div>
 
-                        <input type="hidden" name="preAssessmentValue" value="<%= preAssessmentValue %>" />
-                        <%= preAssessmentValue %>
+            <div class="form-input">
+                <label>Profit/Loss over the year</label>
+                <input type="text" name="profitOrLossSum" value="<%= profitOrLossSum %>" readonly />
+            </div>
 
+            <div class="form-input">
+                <label>Pre-assessment Result</label>
+                <input type="text" name="preAssessmentValue" value="<%= preAssessmentValue %>%" readonly />
+            </div>
 
-                            <% for(let entry of balanceSheet) { %>
-                                <%= entry.year %>
-                                    <% } %>
-                                        <button type="submit">Submit</button>
-    </form>
-
+            <div class="form-input review-button">
+                <input type="submit" value="Submit">
+                <input type="button" value="Edit" onclick="window.history.back()">
+            </div>
+        </form>
+    </div>
 </body>
 
 </html>

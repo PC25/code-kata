@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.main {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+form {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    color: yellowgreen;
+}
+
+.form-input {
+    display: flex;
+    width: 20%;
+    flex-direction: column;
+    align-items: center;
+    font-size: large;
+    font-weight: 500;
+    margin: 15px 0 20px 0;
+}
+
+input,
+select {
+    width: 100%;
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-weight:100;
+}
+
+input:read-only {
+    background-color: rgb(211, 209, 209);
+    border: none;
+    outline: none;
+}
+
+input[type=submit] {
+    background-color: rgb(126, 227, 133);
+    width: 70%;
+    color: white;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+.review-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.review-button input {
+    width: 45%;
+}
+input[type=button] {
+    cursor: pointer;
+    background-color: rgb(244, 244, 244);
+}
+input[type=button]:hover {
+    background-color:rgb(219, 223, 223);
+}
