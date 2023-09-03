@@ -4,25 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/form.css" />
+    <title>Loan Application</title>
 </head>
 
 <body>
-    <form action="accounting" method="POST">
-        <label>Business Name</label>
-        <input type="text" name="businessName" />
-        <label>Year Established</label>
-        <input type="number" name="yearEstablished" />
-        <label>Loan Amount</label>
-        <input type="number" name="loanAmount" />
-        <label>Accounting Provider</label>
-        <input list="accountingProvider" name="accountingProvider">
-        <datalist id="accountingProvider">
-            <option value="Xero">
-            <option value="MYOB">
-        </datalist>
-        <button type="submit">Request Balance Sheet</button>
-    </form>
+    <div class="main">
+        <form action="accounting" method="POST">
+            <div class="form-input">
+                <label>Business Name</label>
+                <input type="text" name="businessName" />
+            </div>
+
+            <div class="form-input">
+                <label>Year Established</label>
+                <input type="text" maxlength="4" oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                    name="yearEstablished" />
+            </div>
+
+            <div class="form-input">
+                <label>Loan Amount</label>
+                <input type="number" name="loanAmount" />
+            </div>
+
+            <div class="form-input">
+                <label>Accounting Provider</label>
+                <select name="accountingProvider">
+                    <option value="Xero">Xero</option>
+                    <option value="MYOB">MYOB</option>
+                </select>
+            </div>
+            <div class="form-input">
+                <input type="submit" value="Request Balance Sheet" />
+            </div>
+        </form>
+    </div>
 </body>
 
 </html>

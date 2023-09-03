@@ -4,11 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/outcome.css">
+    <title>Outcome</title>
 </head>
 
 <body>
-    <%= accept %>
+    <% if(accept===true) { %>
+        <div class="main positive">
+            <div class="result">Accepted</div>
+            <div class="sub" onclick="window.location.href='/'">Start Again</div>
+        </div>
+        <% } else { %>
+            <div class="main negative">
+                <div class="result"> Rejected</div>
+                <div class="sub" onclick="window.location.href='/'">Start Again</div>
+            </div>
+            <% } %>
 </body>
 
 </html>
