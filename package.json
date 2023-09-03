@@ -1,0 +1,24 @@
+{
+  "name": "code-kata",
+  "version": "1.0.0",
+  "description": "A simple business loan application system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PC25/code-kata.git"
+  },
+  "author": "Pushpam Choudhary",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PC25/code-kata/issues"
+  },
+  "homepage": "https://github.com/PC25/code-kata#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1"
+  }
+}
